@@ -1,7 +1,7 @@
-import type { Candle, Timeframe } from './market';
+import type { Candle, Timeframe } from './trading';
 
 export interface IndicatorSnapshot {
-  rsi?: number;
+  rsi14?: number;
   macd?: number;
   macdSignal?: number;
   ema20?: number;
@@ -10,7 +10,7 @@ export interface IndicatorSnapshot {
   bollingerUpper?: number;
   bollingerMiddle?: number;
   bollingerLower?: number;
-  atr?: number;
+  atr14?: number;
 }
 
 export type Trend = 'BULLISH' | 'BEARISH' | 'RANGING' | 'UNCERTAIN';
