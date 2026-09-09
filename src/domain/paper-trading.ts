@@ -2,6 +2,20 @@ export type PositionSide = 'LONG' | 'SHORT';
 export type PaperTradeStatus = 'OPEN' | 'CLOSED' | 'CANCELLED';
 export type CloseReason = 'TAKE_PROFIT' | 'STOP_LOSS' | 'MANUAL' | 'SIGNAL_INVALIDATED';
 
+export interface PaperAccount {
+  id: string;
+  currency: 'PHP';
+  initialBalancePHP: number;
+  cashBalancePHP: number;
+  equityPHP: number;
+  realizedPnlPHP: number;
+  unrealizedPnlPHP: number;
+  peakEquityPHP: number;
+  drawdownPHP: number;
+  drawdownPct: number;
+  updatedAt: string;
+}
+
 export interface PaperPosition {
   id: string;
   accountId: string;
@@ -9,6 +23,7 @@ export interface PaperPosition {
   side: PositionSide;
   quantity: number;
   entryPrice: number;
+  currentPrice: number;
   stopLoss: number;
   takeProfit: number;
   riskAmountPHP: number;
