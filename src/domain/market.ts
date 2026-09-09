@@ -1,26 +1,7 @@
-export type MarketType = 'CRYPTO' | 'FOREX';
-export type Timeframe = '5m' | '15m' | '1h' | '4h' | '1d';
+import type { Asset, Candle, DataFreshness, Timeframe } from './trading';
 
-export interface Asset {
-  id: string;
-  symbol: string;
-  name: string;
-  marketType: MarketType;
-  baseCurrency: string;
-  quoteCurrency: string;
-  active: boolean;
-}
-
-export interface Candle {
-  timestamp: string;
-  open: number;
-  high: number;
-  low: number;
-  close: number;
-  volume: number;
-}
-
-export type DataQuality = 'LIVE' | 'RECENT' | 'DELAYED' | 'STALE' | 'UNAVAILABLE';
+export type { Asset, Candle, Timeframe } from './trading';
+export type DataQuality = DataFreshness;
 
 export interface MarketSnapshot {
   asset: Asset;
