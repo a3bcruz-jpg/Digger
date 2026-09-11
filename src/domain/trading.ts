@@ -1,4 +1,4 @@
-export type MarketType = 'CRYPTO' | 'FOREX';
+export type MarketType = 'CRYPTO' | 'FOREX' | 'COMMODITY';
 
 export type Timeframe = '1M' | '5M' | '15M' | '30M' | '1H' | '4H' | '1D';
 
