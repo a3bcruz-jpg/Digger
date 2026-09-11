@@ -5,6 +5,7 @@ export const supportedAssets: Asset[] = [
   { id: 'eth-usdt', symbol: 'ETH/USDT', name: 'Ethereum / Tether', marketType: 'CRYPTO', baseCurrency: 'ETH', quoteCurrency: 'USDT', active: true },
   { id: 'eur-usd', symbol: 'EUR/USD', name: 'Euro / US Dollar', marketType: 'FOREX', baseCurrency: 'EUR', quoteCurrency: 'USD', active: true },
   { id: 'gbp-usd', symbol: 'GBP/USD', name: 'British Pound / US Dollar', marketType: 'FOREX', baseCurrency: 'GBP', quoteCurrency: 'USD', active: true },
+  { id: 'xau-usd', symbol: 'XAU/USD', name: 'Gold / US Dollar', marketType: 'COMMODITY', baseCurrency: 'XAU', quoteCurrency: 'USD', active: true },
 ];
 
 export function findAsset(id: string): Asset | undefined {
